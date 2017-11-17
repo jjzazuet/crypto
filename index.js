@@ -1,4 +1,4 @@
-module.exports = require('./gostCrypto');
+var gost = require('./gostCrypto');
 require('./gostASN1');
 require('./gostCert');
 require('./gostCipher');
@@ -11,3 +11,9 @@ require('./gostRandom');
 require('./gostSecurity');
 require('./gostSign');
 require('./gostViewer');
+
+function WebCrypto() {
+  Object.assign(this, gost);
+};
+
+module.exports = WebCrypto;

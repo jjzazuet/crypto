@@ -1,3 +1,5 @@
-const gost = require('././index');
+const WebCrypto = require('./index');
+console.log(WebCrypto);
 
-console.log(gost);
+const instance = new WebCrypto();
+console.log(instance);
