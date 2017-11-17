@@ -36,7 +36,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostCrypto', 'gostCoding', 'gostSecurity', 'gostASN1'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostCrypto'), require('gostCoding'), require('gostSecurity'), require('gostASN1'));
+        module.exports = factory(require('./gostCrypto'), require('./gostCoding'), require('./gostSecurity'), require('./gostASN1'));
     } else {
         root.gostViewer = factory(root.gostCrypto, root.gostCoding, root.gostSecurity, root.gostASN1);
     }

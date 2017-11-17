@@ -39,7 +39,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostCrypto'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostCrypto'));
+        module.exports = factory(require('./gostCrypto'));
     } else {
         root.GostCoding = factory(root.gostCrypto);
     }

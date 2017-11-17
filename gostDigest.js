@@ -43,7 +43,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostRandom', 'gostCipher'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostRandom'), require('gostCipher'));
+        module.exports = factory(require('./gostRandom'), require('./gostCipher'));
     } else {
         root.GostDigest = factory(root.GostRandom, root.GostCipher);
     }

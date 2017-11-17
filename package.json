@@ -1,0 +1,36 @@
+{
+  "name": "webcrypto-gost",
+  "version": "1.0.0",
+  "description": "WebCrypto GOST for Node.js environments.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jzazuet/crypto.git"
+  },
+  "author": "Rudolf Nickolaev",
+  "contributors": [
+    "Roman Sopov", "Jesús Zazueta"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jzazuet/crypto/issues"
+  },
+  "homepage": "https://github.com/jzazuet/crypto#readme",
+  "keywords": [
+    "WebCrypto",
+    "Public Key Infrastructure",
+    "PKI",
+    "Russian Cryptographic Standards",
+    "GOST",
+    "SignalCom",
+    "CryptoPRO",
+    "private key",
+    "ASN1",
+    "cipher",
+    "digest",
+    "security"
+  ]
+}

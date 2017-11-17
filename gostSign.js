@@ -42,7 +42,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostRandom', 'gostDigest'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostRandom'), require('gostDigest'));
+        module.exports = factory(require('./gostRandom'), require('./gostDigest'));
     } else {
         root.GostSign = factory(root.GostRandom, root.GostDigest);
     }

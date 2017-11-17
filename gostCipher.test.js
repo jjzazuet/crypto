@@ -37,7 +37,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostCoding', 'gostCipher'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostCoding'), require('gostCipher'));
+        module.exports = factory(require('./gostCoding'), require('./gostCipher'));
     } else {
         if (typeof importScripts !== 'undefined') {
             if (!root.onmessage)

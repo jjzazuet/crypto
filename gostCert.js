@@ -49,7 +49,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostCrypto', 'gostASN1'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostCrypto'), require('gostASN1'));
+        module.exports = factory(require('./gostCrypto'), require('./gostASN1'));
     } else {
         root.GostCert = factory(root.gostCrypto, root.GostASN1);
     }

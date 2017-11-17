@@ -39,7 +39,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['gostRandom'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('gostRandom'));
+        module.exports = factory(require('./gostRandom'));
     } else {
         root.gostCrypto = factory(root.GostRandom);
     }
@@ -745,14 +745,16 @@
 
     // Local importScripts procedure for include dependens
     function importScripts() {
-        for (var i = 0, n = arguments.length; i < n; i++) {
-            var name = arguments[i].split('.'),
-                    src = baseUrl + name[0] + nameSuffix + '.' + name[1];
-            var el = document.querySelector('script[src="' + src + '"]');
-            if (!el) {
-                el = document.createElement('script');
-                el.setAttribute('src', src);
-                document.head.appendChild(el);
+        if (typeof document !== 'undefined') {
+            for (var i = 0, n = arguments.length; i < n; i++) {
+                var name = arguments[i].split('.'),
+                        src = baseUrl + name[0] + nameSuffix + '.' + name[1];
+                var el = document.querySelector('script[src="' + src + '"]');
+                if (!el) {
+                    el = document.createElement('script');
+                    el.setAttribute('src', src);
+                    document.head.appendChild(el);
+                }
             }
         }
     }
