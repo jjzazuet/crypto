@@ -52,21 +52,7 @@
 }(this, function (GostCoding, GostCipher) {
 
     var root = this, gostCoding;
-
-    function println(s, h) {
-        if (typeof importScripts !== 'undefined') {
-            var tag = h ? 'h3' : 'div';
-            postMessage({log: '<' + tag + '>' + (s || '&nbsp') + '</' + tag + '>'});
-        } else {
-            if (typeof document !== 'undefined') {
-                var el = document.createElement(h ? 'h3' : 'div');
-                el.innerHTML = s || '&nbsp';
-                (document.getElementById('output') || document.body).appendChild(el);
-            }
-            if (typeof console !== 'undefined')
-                console.log((s || '') + (h ? '' : '\n'));
-        }
-    }
+    var println = require('./gostUtil.test').println;
 
     function perform(id, algorithm, key, input, output) {
         var Hex = gostCoding.Hex;

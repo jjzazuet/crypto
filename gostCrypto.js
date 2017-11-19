@@ -1654,7 +1654,7 @@
         GostRandom = GostRandom || root.GostRandom;
         var randomSource = GostRandom ? new GostRandom() : rootCrypto;
         if (randomSource.getRandomValues)
-            randomSource.getRandomValues(array);
+            return randomSource.getRandomValues(array);
         else
             throw new NotSupportedError('Random generator not found');
     }; // </editor-fold>

@@ -52,21 +52,7 @@
     var root = this, gostCoding;
 
     /* ========== Tests ========== */
-
-    function println(s, h) {
-        if (typeof importScripts !== 'undefined') {
-            var tag = h ? 'h3' : 'div';
-            postMessage({log: '<' + tag + '>' + (s || '&nbsp') + '</' + tag + '>'});
-        } else {
-            if (typeof document !== 'undefined') {
-                var el = document.createElement(h ? 'h3' : 'div');
-                el.innerHTML = s || '&nbsp';
-                (document.getElementById('output') || document.body).appendChild(el);
-            }
-            if (typeof console !== 'undefined')
-                console.log((s || '') + (h ? '' : '\n'));
-        }
-    }
+    var println = require('./gostUtil.test').println;
 
     function perform(cipher, id, array, digest, method, param) {
         var start, finish, out, r, test;
